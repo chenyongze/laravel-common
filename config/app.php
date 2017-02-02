@@ -183,6 +183,11 @@ return [
 
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        /**
+         * laravel-wechat 开发微信
+         */
+        Overtrue\LaravelWechat\ServiceProvider::class,
+
     ],
 
     /*
@@ -236,6 +241,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        
+        'Wechat' => Overtrue\LaravelWechat\Facade::class,
     ],
 
 ];
