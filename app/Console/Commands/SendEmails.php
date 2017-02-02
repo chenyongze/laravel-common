@@ -40,7 +40,6 @@ class SendEmails extends Command
     public function handle()
     {
         $name = $this->ask('What is your name?');
-
         if ($this->confirm('Do you wish to continue? [y|N]')) {
             $bar = $this->output->createProgressBar(30);
             for ($i=30;$i>=0;$i--){
