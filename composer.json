@@ -10,6 +10,7 @@
         "barryvdh/laravel-dompdf": "^0.7.1",
         "barryvdh/laravel-ide-helper": "^2.2",
         "dflydev/apache-mime-types": "^1.0",
+        "doctrine/dbal": "^2.5",
         "erusev/parsedown": "^1.6",
         "intervention/image": "^2.3",
         "jaeger/querylist": "^3.1",
