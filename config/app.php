@@ -188,6 +188,11 @@ return [
          */
         Overtrue\LaravelWechat\ServiceProvider::class,
 
+        /**
+         * 阿里大鱼
+         */
+        Skyling\Alidayu\AlidayuServiceProvider::class
+
     ],
 
     /*
@@ -241,8 +246,10 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        
+
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
+        
+        'Alidayu' => \Skyling\Alidayu\Facade\Alidayu::class,
     ],
 
 ];
