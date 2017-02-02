@@ -59,6 +59,10 @@ Route::group([
     Route::get('caiji','TestController@caiji');
     Route::get('pinyin','TestController@pinyin');
     Route::get('username','TestController@userName');
+    Route::get('cacheInc','TestController@cacheInc');
+    Route::get('collect','TestController@collect');
+    Route::get('db','TestController@db');
+    Route::get('crypt','TestController@crypt');
 });
 
 

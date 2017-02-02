@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\api;
 
 use App\User;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 use Overtrue\Pinyin\Pinyin;
+use Symfony\Component\Console\Helper\ProcessHelper;
 
 class TestController extends Controller
 {
@@ -67,5 +72,39 @@ class TestController extends Controller
     {
         $user = User::find(1);
         return ($user->name);
+    }
+
+
+    /**
+     *
+     */
+    public function cacheInc()
+    {
+        return Cache::increment('inc-key-todo');
+    }
+
+    public function collect()
+    {
+         $collection = collect([1, 2, 3]);
+        return (int) ($collection->count());
+    }
+
+    public function db()
+    {
+//        $results = DB::connection('mysql-online');
+        $results = DB::table('users')->select('name as n', 'email')->get();
+//        $results = DB::select('select * from users where id =:id', [':id'=>1,]);
+//        dump($results);die;
+        return $results;
+    }
+
+    public function crypt()
+    {
+        $str = 'yongze';
+        return [
+            '1-0'=>$str,
+            '1-1'=>Crypt::encrypt($str),
+            '1-2'=>Crypt::decrypt(Crypt::encrypt($str)),
+        ];
     }
 }

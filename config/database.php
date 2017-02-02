@@ -53,6 +53,20 @@ return [
             'engine' => null,
         ],
 
+        'mysql-online' => [
+            'driver' => 'mysql',
+            'host' => 'shenglediangchangonline.mysql.rds.aliyuncs.com',
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'tangka',
+            'username' => 'remotersync',
+            'password' => 'shengLDianc@2016@!',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
