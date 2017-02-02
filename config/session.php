@@ -70,7 +70,8 @@ return [
     |
     */
 
-    'connection' => null,
+//    'connection' => null,
+    'connection' => 'session',
 
     /*
     |--------------------------------------------------------------------------
