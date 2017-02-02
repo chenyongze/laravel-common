@@ -198,6 +198,11 @@ return [
          */
         Barryvdh\DomPDF\ServiceProvider::class,
 
+        /**
+         * barryvdh/laravel-ide-helper ide支持
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
     ],
 
     /*
