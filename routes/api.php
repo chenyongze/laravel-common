@@ -46,3 +46,17 @@ Route::group([
     Route::delete('comments/{id}', 'CommentController@destroy')->middleware('auth:api');
     Route::get('tags', 'TagController@getList');
 });
+
+//test
+Route::get('abc/bb', function () {
+    return [1, 2, 3];
+});
+
+
+Route::group([
+    'namespace' => 'Api',
+], function () {
+    Route::get('abc/ddd','KbController@abc');
+});
+
+
