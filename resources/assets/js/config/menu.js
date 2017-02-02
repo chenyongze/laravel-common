@@ -33,6 +33,7 @@ export default [
         label: 'sidebar.tag',
         icon : 'ion-ios-pricetags',
         uri  : '/dashboard/tags'
+        
     },
     {
         label: 'sidebar.category',
@@ -43,6 +44,7 @@ export default [
         label: 'sidebar.link',
         icon : 'ion-ios-world',
         uri  : '/dashboard/links'
+
     },
     {
         label: 'sidebar.visitor',
