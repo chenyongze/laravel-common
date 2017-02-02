@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redis;
+use Overtrue\Pinyin\Pinyin;
 
 class KbController extends Controller
 {
@@ -39,5 +40,26 @@ class KbController extends Controller
         $data = \QL\QueryList::Query($page,$rules,$rang)->data;
         //查看采集结果
         return $data;
+    }
+
+    public function pinyin()
+    {
+
+    // 小内存型
+            $pinyin = new Pinyin(); // 默认
+    // 内存型
+    // $pinyin = new Pinyin('Overtrue\Pinyin\MemoryFileDictLoader');
+    // I/O型
+    // $pinyin = new Pinyin('Overtrue\Pinyin\GeneratorFileDictLoader');
+
+        $res =  $pinyin->convert('带着希望去旅行，比到达终点更美好');
+    // ["dai", "zhe", "xi", "wang", "qu", "lv", "xing", "bi", "dao", "da", "zhong", "dian", "geng", "mei", "hao"]
+
+            $pinyin->convert('带着希望去旅行，比到达终点更美好', PINYIN_UNICODE);
+    // ["dài","zhe","xī","wàng","qù","lǚ","xíng","bǐ","dào","dá","zhōng","diǎn","gèng","měi","hǎo"]
+
+        $pinyin->convert('带着希望去旅行，比到达终点更美好', PINYIN_ASCII);
+        return $res;
+    //["dai4","zhe","xi1","wang4","qu4","lv3","xing2","bi3","dao4","da2","zhong1","dian3","geng4","mei3","hao3"]
     }
 }
