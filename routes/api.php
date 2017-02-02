@@ -56,9 +56,10 @@ Route::get('abc/bb/{id}', function () {
 Route::group([
     'namespace' => 'Api',
 ], function () {
-    Route::get('abc/ddd/{id}/user_id','KbController@abc');
-    Route::get('caiji','KbController@caiji');
-    Route::get('pinyin','KbController@pinyin');
+    Route::get('abc/ddd/{id}/user_id','TestController@abc');
+    Route::get('caiji','TestController@caiji');
+    Route::get('pinyin','TestController@pinyin');
+    Route::get('username','TestController@userName');
 });
 
 

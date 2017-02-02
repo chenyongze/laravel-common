@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Redis;
 use Overtrue\Pinyin\Pinyin;
 
-class KbController extends Controller
+class TestController extends Controller
 {
     //
     public function abc($id){
@@ -61,5 +61,11 @@ class KbController extends Controller
         $pinyin->convert('带着希望去旅行，比到达终点更美好', PINYIN_ASCII);
         return $res;
     //["dai4","zhe","xi1","wang4","qu4","lv3","xing2","bi3","dao4","da2","zhong1","dian3","geng4","mei3","hao3"]
+    }
+
+    public function userName()
+    {
+        $user = User::find(1);
+        return ($user->name);
     }
 }
