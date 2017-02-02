@@ -60,3 +60,12 @@ Route::group([
 });
 
 
+
+Route::group([
+    'namespace' => 'Api',
+], function () {
+    Route::get('caiji','KbController@caiji');
+});
+
+
+
