@@ -1,6 +1,7 @@
 window.$ = window.jQuery = require('jquery');
 window.swal = require('sweetalert');
 window.Vue = require('vue');
+window.Vue = require('vue');
 
 require('bootstrap-sass');
 require('vue-resource');
@@ -12,6 +13,7 @@ window.hljs = require('./vendor/highlight.min.js');
 Vue.http.interceptors.push((request, next) => {
     request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
     next();
+
 });
 
 Vue.component('comment', require('./components/Comment.vue'));

@@ -18,11 +18,9 @@
                     <!-- Authorized Tokens -->
                     <table class="table table-borderless m-b-none">
                         <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Scopes</th>
-                                <th></th>
-                            </tr>
+                            <th>Name</th>
+                            <th>Scopes</th>
+                            <th></th>
                         </thead>
 
                         <tbody>
@@ -66,27 +64,13 @@
         },
 
         /**
-         * Prepare the component (Vue 1.x).
-         */
-        ready() {
-            this.prepareComponent();
-        },
-
-        /**
-         * Prepare the component (Vue 2.x).
+         * Prepare the component.
          */
         mounted() {
-            this.prepareComponent();
+            this.getTokens();
         },
 
         methods: {
-            /**
-             * Prepare the component (Vue 2.x).
-             */
-            prepareComponent() {
-                this.getTokens();
-            },
-
             /**
              * Get all of the authorized tokens for the user.
              */
