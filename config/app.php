@@ -191,7 +191,12 @@ return [
         /**
          * 阿里大鱼
          */
-        Skyling\Alidayu\AlidayuServiceProvider::class
+        Skyling\Alidayu\AlidayuServiceProvider::class,
+
+        /**
+         * barryvdh/laravel-dompdf 创建pdf
+         */
+        Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
 
@@ -248,8 +253,10 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
         'Wechat' => Overtrue\LaravelWechat\Facade::class,
-        
+
         'Alidayu' => \Skyling\Alidayu\Facade\Alidayu::class,
+
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];
