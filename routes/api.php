@@ -48,9 +48,9 @@ Route::group([
 });
 
 //test
-Route::get('abc/bb/{id}', function () {
-    return [1, 2, 3];
-});
+//Route::get('abc/bb/{id}', function () {
+//    return [1, 2, 3];
+//});
 
 Route::group([
     'namespace' => 'Api',

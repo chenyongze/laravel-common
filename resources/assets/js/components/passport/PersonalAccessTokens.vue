@@ -33,8 +33,10 @@
                     <!-- Personal Access Tokens -->
                     <table class="table table-borderless m-b-none" v-if="tokens.length > 0">
                         <thead>
-                            <th>Name</th>
-                            <th></th>
+                            <tr>
+                                <th>Name</th>
+                                <th></th>
+                            </tr>
                         </thead>
 
                         <tbody>
@@ -177,18 +179,32 @@
         },
 
         /**
-         * Prepare the component.
+         * Prepare the component (Vue 1.x).
+         */
+        ready() {
+            this.prepareComponent();
+        },
+
+        /**
+         * Prepare the component (Vue 2.x).
          */
         mounted() {
-            this.getTokens();
-            this.getScopes();
-
-            $('#modal-create-token').on('shown.bs.modal', () => {
-                $('#create-token-name').focus();
-            });
+            this.prepareComponent();
         },
 
         methods: {
+            /**
+             * Prepare the component.
+             */
+            prepareComponent() {
+                this.getTokens();
+                this.getScopes();
+
+                $('#modal-create-token').on('shown.bs.modal', () => {
+                    $('#create-token-name').focus();
+                });
+            },
+
             /**
              * Get all of the personal access tokens for the user.
              */
@@ -258,7 +274,7 @@
              * Determine if the given scope has been assigned to the token.
              */
             scopeIsAssigned(scope) {
-                return _.indexOf(this.form.scopes, scope) > 0;
+                return _.indexOf(this.form.scopes, scope) >= 0;
             },
 
             /**
