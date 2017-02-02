@@ -52,11 +52,10 @@ Route::get('abc/bb/{id}', function () {
     return [1, 2, 3];
 });
 
-
 Route::group([
     'namespace' => 'Api',
 ], function () {
-    Route::get('abc/ddd/{id}/user_id','TestController@abc');
+    Route::get('abc/{id}/user_id','TestController@abc');
     Route::get('caiji','TestController@caiji');
     Route::get('pinyin','TestController@pinyin');
     Route::get('username','TestController@userName');
