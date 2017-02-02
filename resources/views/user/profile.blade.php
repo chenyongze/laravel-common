@@ -112,7 +112,7 @@
 @endsection
 
 @section('styles')
-<link rel="stylesheet" href="{{ elixir('css/jcrop.css') }}">
+<link rel="stylesheet" href="{{ mix('css/jcrop.css') }}">
 <style>
     .modal {
         overflow: hidden !important;
