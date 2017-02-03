@@ -13,6 +13,7 @@
         "barryvdh/laravel-ide-helper": "^2.2",
         "dflydev/apache-mime-types": "^1.0",
         "doctrine/dbal": "^2.5",
+        "endroid/qrcode": "^1.9",
         "erusev/parsedown": "^1.6",
         "guzzle/guzzle": "^3.9",
         "infyomlabs/adminlte-templates": "5.3.x-dev",
