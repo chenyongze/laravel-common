@@ -161,6 +161,8 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
+            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -314,6 +316,8 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
+            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \App::make('') => [
             '' == '@',
@@ -467,6 +471,8 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
+            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \app('') => [
             '' == '@',
@@ -620,6 +626,8 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
+            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
+            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
     ];
 }

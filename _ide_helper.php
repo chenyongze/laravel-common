@@ -14399,6 +14399,120 @@ namespace {
     }
 
 
+    class Android extends \Umeng\Facades\Android{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function unicast($device_tokens = '', $body = array(), $extra = array()){
+            return \Umeng\Android\AndroidPusher::unicast($device_tokens, $body, $extra);
+        }
+        
+        /**
+         * 列播
+         *
+         * @param string $device_tokens
+         * @param array $body
+         * @param array $extra
+         * @return mixed 
+         * @throws \Umeng\Exception\UmengException
+         * @static 
+         */
+        public static function listcast($device_tokens = '', $body = array(), $extra = array()){
+            return \Umeng\Android\AndroidPusher::listcast($device_tokens, $body, $extra);
+        }
+        
+        /**
+         * 广播
+         *
+         * @param array $body
+         * @param array $extra
+         * @return int 
+         * @throws \Umeng\Android\Exception
+         * @static 
+         */
+        public static function broadcast($body = array(), $extra = array()){
+            return \Umeng\Android\AndroidPusher::broadcast($body, $extra);
+        }
+        
+        /**
+         * customizedcast
+         *
+         * @param string $alias
+         * @param array $body
+         * @param array $extra
+         * @return int|mixed 
+         * @throws Exception
+         * @static 
+         */
+        public static function customizedcast($alias = '', $body = array(), $extra = array()){
+            return \Umeng\Android\AndroidPusher::customizedcast($alias, $body, $extra);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function sendStatus($taskID){
+            return \Umeng\Android\AndroidPusher::sendStatus($taskID);
+        }
+        
+    }
+
+
+    class IOS extends \Umeng\Facades\IOS{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function broadcast($aps = array(), $extra = array()){
+            return \Umeng\IOS\IOSPusher::broadcast($aps, $extra);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function listcast($device_tokens = '', $aps = array(), $extra = array()){
+            return \Umeng\IOS\IOSPusher::listcast($device_tokens, $aps, $extra);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function unicast($device_tokens = '', $aps = array(), $extra = array()){
+            return \Umeng\IOS\IOSPusher::unicast($device_tokens, $aps, $extra);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function customizedcast($alias = '', $aps = array(), $extra = array()){
+            return \Umeng\IOS\IOSPusher::customizedcast($alias, $aps, $extra);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function sendStatus($taskID){
+            return \Umeng\IOS\IOSPusher::sendStatus($taskID);
+        }
+        
+    }
+
+
 }
 
 

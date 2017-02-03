@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "03b5f8cad65727c74896245f9eb06c2c",
+    "content-hash": "5d8ebf920b9b5902d33bfeade775a63e",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -4337,16 +4337,16 @@
         },
         {
             "name": "qiniu/php-sdk",
-            "version": "v7.1.3",
+            "version": "v7.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/qiniu/php-sdk.git",
-                "reference": "b91653485e36b4797d7a302cc86c49695e47a642"
+                "reference": "d1bca450b56d85beb7ba21f374a47bfeb59c288b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/qiniu/php-sdk/b91653485e36b4797d7a302cc86c49695e47a642.zip",
-                "reference": "b91653485e36b4797d7a302cc86c49695e47a642",
+                "url": "https://packagist.phpcomposer.com/files/qiniu/php-sdk/d1bca450b56d85beb7ba21f374a47bfeb59c288b.zip",
+                "reference": "d1bca450b56d85beb7ba21f374a47bfeb59c288b",
                 "shasum": ""
             },
             "require": {
@@ -4384,7 +4384,7 @@
                 "sdk",
                 "storage"
             ],
-            "time": "2016-11-18T02:57:31+00:00"
+            "time": "2016-07-19T06:18:08+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -5630,6 +5630,128 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "yangyifan/config-helper",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tyua07/config-helper.git",
+                "reference": "1ddee95b12fe3821be38e00a5727d7951e0ffb53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/tyua07/config-helper/1ddee95b12fe3821be38e00a5727d7951e0ffb53.zip",
+                "reference": "1ddee95b12fe3821be38e00a5727d7951e0ffb53",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yangyifan\\Config\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "yangyifan",
+                    "email": "yangyifanphp@gmail.com"
+                }
+            ],
+            "time": "2016-12-24T12:07:01+00:00"
+        },
+        {
+            "name": "yangyifan/library-helper",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tyua07/library-helper.git",
+                "reference": "a4a0c6a872286dae5fcd327499a603e6716575ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/tyua07/library-helper/a4a0c6a872286dae5fcd327499a603e6716575ff.zip",
+                "reference": "a4a0c6a872286dae5fcd327499a603e6716575ff",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.21"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yangyifan\\Library\\": "./src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "yangyifan",
+                    "email": "yangyifanphp@gmail.com"
+                }
+            ],
+            "time": "2016-12-31T06:35:08+00:00"
+        },
+        {
+            "name": "yangyifan/upload",
+            "version": "v0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tyua07/laravel-upload.git",
+                "reference": "8032ccd74528cc4e5a60d02b4eba5fb3879758ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/tyua07/laravel-upload/8032ccd74528cc4e5a60d02b4eba5fb3879758ce.zip",
+                "reference": "8032ccd74528cc4e5a60d02b4eba5fb3879758ce",
+                "shasum": ""
+            },
+            "require": {
+                "aliyuncs/oss-sdk-php": "*",
+                "league/flysystem": "^1.0",
+                "qiniu/php-sdk": "v7.0.*",
+                "yangyifan/config-helper": "0.1",
+                "yangyifan/library-helper": "v0.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yangyifan\\Upload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "yangyifan",
+                    "email": "yangyifanphp@gmail.com"
+                }
+            ],
+            "description": "上传 SDK for Laravel",
+            "keywords": [
+                "laravel",
+                "oss",
+                "qiniu",
+                "sdk",
+                "tyua07",
+                "upload",
+                "upyun"
+            ],
+            "time": "2016-12-25T12:09:07+00:00"
         },
         {
             "name": "yzalis/identicon",

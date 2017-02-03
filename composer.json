@@ -43,9 +43,11 @@
         "overtrue/pinyin": "^3.0",
         "phpxin/phprpc": "^1.0",
         "predis/predis": "^1.1",
+        "qiniu/php-sdk": "v7.0.8",
         "skyling/laravel-alidayu": "dev-master",
         "skyling/laravel-yunpian": "dev-master",
         "umeng/umeng": "dev-master",
+        "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
     },
