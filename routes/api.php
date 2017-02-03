@@ -63,6 +63,7 @@ Route::group([
     Route::get('collect','TestController@collect');
     Route::get('db','TestController@db');
     Route::get('crypt','TestController@crypt');
+    Route::get('alipayApp','TestController@alipayApp');
 });
 
 

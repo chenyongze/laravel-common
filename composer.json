@@ -30,6 +30,10 @@
         "overtrue/pinyin": "^3.0",
         "predis/predis": "^1.1",
         "skyling/laravel-alidayu": "dev-master",
+        "lokielse/omnipay-alipay": "^2.0",
+        "lokielse/omnipay-wechatpay": "^1.0",
+        "lokielse/omnipay-unionpay": "dev-master",
+        "omnipay/paypal": "~2.0",
         "yzalis/identicon": "^1.1"
     },
     "require-dev": {
