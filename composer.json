@@ -25,7 +25,7 @@
         "jenssegers/mongodb": "^3.1",
         "jlapp/swaggervel": "dev-master",
         "jpush/jpush": "^3.5",
-        "laravel/framework": "5.4.*",
+        "laravel/framework": "v5.4.8",
         "laravel/passport": "^1.0",
         "laravel/socialite": "^2.0",
         "laravel/tinker": "~1.0",
