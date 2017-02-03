@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "984c4610f339e0876cc49fa65a344fe8",
+    "content-hash": "3c07b9d1aa711d6dff5776e114523d07",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1436,6 +1436,49 @@
                 "mongodb"
             ],
             "time": "2016-11-04T18:10:36+00:00"
+        },
+        {
+            "name": "jpush/jpush",
+            "version": "v3.5.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jpush/jpush-api-php-client.git",
+                "reference": "c4e23cbba8604a916d167d5fff37891ee8cf4446"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/jpush/jpush-api-php-client/c4e23cbba8604a916d167d5fff37891ee8cf4446.zip",
+                "reference": "c4e23cbba8604a916d167d5fff37891ee8cf4446",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JPush\\": "src/JPush/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "JPush",
+                    "email": "support@jpush.cn",
+                    "homepage": "https://www.jpush.cn/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "JPush API PHP Client",
+            "homepage": "https://github.com/jpush/jpush-api-php-client",
+            "time": "2017-01-24T03:02:22+00:00"
         },
         {
             "name": "laravel/framework",
