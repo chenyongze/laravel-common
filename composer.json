@@ -39,6 +39,7 @@
         "overtrue/pinyin": "^3.0",
         "predis/predis": "^1.1",
         "skyling/laravel-alidayu": "dev-master",
+        "skyling/laravel-yunpian": "dev-master",
         "yzalis/identicon": "^1.1",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
     },

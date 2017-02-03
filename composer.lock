@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "345dcb1c6848e7614441733f427e8b3d",
+    "content-hash": "42319e9e9b3c01c42bbf47fba0fb5fc5",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -4338,6 +4338,42 @@
             "time": "2016-09-06T09:13:18+00:00"
         },
         {
+            "name": "skyling/laravel-yunpian",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skyling/laravel-yunpian.git",
+                "reference": "9711b33b5c0d0a3991e088cc0ad61483f2451eaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/skyling/laravel-yunpian/9711b33b5c0d0a3991e088cc0ad61483f2451eaf.zip",
+                "reference": "9711b33b5c0d0a3991e088cc0ad61483f2451eaf",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "6.2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Skyling\\Yunpian\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "frenlee",
+                    "email": "frenlee710@gmail.com"
+                }
+            ],
+            "description": "laravel 云片网接口",
+            "time": "2016-09-11 08:38:27"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.5",
             "source": {
@@ -7023,7 +7059,8 @@
         "jlapp/swaggervel": 20,
         "lokielse/omnipay-unionpay": 20,
         "overtrue/laravel-uploader": 20,
-        "skyling/laravel-alidayu": 20
+        "skyling/laravel-alidayu": 20,
+        "skyling/laravel-yunpian": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

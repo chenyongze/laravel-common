@@ -213,8 +213,12 @@ return [
          * Qiniu 云储存 Laravel 5 Storage版
          */
         \zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        /**
+         * 云片
+         */
+        \Skyling\Yunpian\YunpianServiceProvider::class,
 
-    ],
+    ],  
 
     /*
     |--------------------------------------------------------------------------
@@ -277,6 +281,8 @@ return [
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
         'Flash'     => Laracasts\Flash\Flash::class,
+
+        'Yunpian' => \Skyling\Yunpian\Facade\Yunpian::class,
     ],
 
 ];

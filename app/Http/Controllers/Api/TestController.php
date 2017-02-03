@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 use Omnipay\Omnipay;
 use Overtrue\Pinyin\Pinyin;
+use Skyling\Yunpian\Facade\Yunpian;
 use Symfony\Component\Console\Helper\ProcessHelper;
 
 class TestController extends Controller
@@ -314,5 +315,18 @@ s8WkxG27+drhHztF
         $rst = $disk->getDriver()->downloadUrl('001NZcFCzy6VKRUYjIF1d&690.jpg');
 //        $rst = $disk->put('fileqqqqqq.jpg',$contents);
         var_dump($rst);
+    }
+
+
+    public function yunpian()
+    {
+        // 发送单条短信
+        $rst = Yunpian::sms()->singleSend('18911358085', '【胜乐典藏】您有1笔未支付的订单{$data}，将要过期，请尽快支付。（过期扣除保证金）', '回调地址');
+        return $rst ;
+//        var_dump($rst);
+        // 发送多条短信
+//        Yunpian::sms()->batchSend(['手机号数组'], '短信内容文本', '回调地址');
+        // 发送语音验证码
+//        Yunpian::voice()->voiceSend('手机号', '验证码', '回调地址');
     }
 }
