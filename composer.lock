@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1fa7ecaf2e2988a1031108291ed81cb1",
+    "content-hash": "c94aba181b3ba8b187940126dbaf94b1",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -3938,6 +3938,36 @@
                 "x509"
             ],
             "time": "2016-10-04T00:57:04+00:00"
+        },
+        {
+            "name": "phpxin/phprpc",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpxin/phprpc.git",
+                "reference": "f7bf082b865b8930453b32098a22a588c655ba53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/phpxin/phprpc/f7bf082b865b8930453b32098a22a588c655ba53.zip",
+                "reference": "f7bf082b865b8930453b32098a22a588c655ba53",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/phprpc_date.php",
+                    "src/phprpc_client.php",
+                    "src/phprpc_server.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "PHPRPC For PHP",
+            "homepage": "http://phprpc.org/",
+            "keywords": [
+                "phprpc"
+            ],
+            "time": "2016-08-19T03:03:20+00:00"
         },
         {
             "name": "pimple/pimple",
