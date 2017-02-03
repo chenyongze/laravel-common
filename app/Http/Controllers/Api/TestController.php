@@ -269,4 +269,38 @@ s8WkxG27+drhHztF
 //        $response->getJsOrderData(); //For WechatPay_Js
 //        $response->getCodeUrl(); //For Native Trade Type
     }
+
+    /**
+     * 二维码 微信
+     */
+    public function wechatNative()
+    {
+        $gateway    = Omnipay::create('WechatPay_Native');
+        $gateway->setAppId('wx09daf09c8118c474');
+        $gateway->setMchId('1362198902');
+        $gateway->setApiKey('xnfLY8u1s0oPFebk5Gf5KDYYzfk62Z6G');
+        $gateway->setNotifyUrl('https://www.example.com/notify');
+
+        $order = [
+            'body'              => 'The test order',
+            'out_trade_no'      => date('YmdHis').mt_rand(1000, 9999),
+            'total_fee'         => 1, //=0.01
+            'spbill_create_ip'  => '192.168.1.1',
+            'fee_type'          => 'CNY'
+        ];
+
+        /**
+         * @var Omnipay\WechatPay\Message\CreateOrderRequest $request
+         * @var Omnipay\WechatPay\Message\CreateOrderResponse $response
+         */
+        $request  = $gateway->purchase($order);
+        $response = $request->send();
+
+        $response->isSuccessful();
+        $response->getData(); //For debug
+//        $response->getAppOrderData(); //For WechatPay_App
+//        $response->getJsOrderData(); //For WechatPay_Js
+        return $response->getCodeUrl(); //For Native Trade Type
+
+    }
 }
