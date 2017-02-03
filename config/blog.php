@@ -48,7 +48,7 @@ return [
     'footer' => [
         'github' => [
             'open' => true,
-            'url'  => 'https://github.com/jcc',
+            'url'  => 'https://github.com/chenyongze',
         ],
         'twitter' => [
             'open' => true,
