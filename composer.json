@@ -6,6 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+        "InfyOmLabs/laravel-generator": "dev-master",
+        "laravelcollective/html": "^5.3.0",
+        "infyomlabs/adminlte-templates": "5.3.x-dev",
+        "infyomlabs/swagger-generator": "dev-master",
+        "jlapp/swaggervel": "dev-master",
         "barryvdh/laravel-debugbar": "^2.3",
         "barryvdh/laravel-dompdf": "^0.7.1",
         "barryvdh/laravel-ide-helper": "^2.2",
@@ -23,6 +28,10 @@
         "laravel/tinker": "~1.0",
         "league/fractal": "^0.14.0",
         "league/html-to-markdown": "^4.2",
+        "lokielse/omnipay-alipay": "^2.0",
+        "lokielse/omnipay-unionpay": "dev-master",
+        "lokielse/omnipay-wechatpay": "^1.0",
+        "omnipay/paypal": "~2.0",
         "overtrue/laravel-follow": "^1.0",
         "overtrue/laravel-pinyin": "^3.0",
         "overtrue/laravel-uploader": "dev-master",
@@ -30,10 +39,6 @@
         "overtrue/pinyin": "^3.0",
         "predis/predis": "^1.1",
         "skyling/laravel-alidayu": "dev-master",
-        "lokielse/omnipay-alipay": "^2.0",
-        "lokielse/omnipay-wechatpay": "^1.0",
-        "lokielse/omnipay-unionpay": "dev-master",
-        "omnipay/paypal": "~2.0",
         "yzalis/identicon": "^1.1"
     },
     "require-dev": {
