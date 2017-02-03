@@ -209,6 +209,11 @@ return [
         \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
         \InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
 
+        /**
+         * Qiniu 云储存 Laravel 5 Storage版
+         */
+        \zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+
     ],
 
     /*

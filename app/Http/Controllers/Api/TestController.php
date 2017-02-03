@@ -303,4 +303,16 @@ s8WkxG27+drhHztF
         return $response->getCodeUrl(); //For Native Trade Type
 
     }
+
+
+    public function qiniu()
+    {
+        $disk = \Storage::disk('qiniu');
+//        $rst = $disk->exists('001NZcFCzy6VKRUYjIF1d&690.jpg');
+//        $rst = $disk->get('001NZcFCzy6VKRUYjIF1d&690.jpg');
+        $contents ='http://blog.dotalk.cn/wp-content/uploads/2016/12/qrcode_for_gh_4566810f39c8_430.jpg';
+        $rst = $disk->getDriver()->downloadUrl('001NZcFCzy6VKRUYjIF1d&690.jpg');
+//        $rst = $disk->put('fileqqqqqq.jpg',$contents);
+        var_dump($rst);
+    }
 }

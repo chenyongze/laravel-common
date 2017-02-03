@@ -67,6 +67,7 @@ Route::group([
     Route::get('alipayWap','TestController@alipayWap');
     Route::get('wechatPayApp','TestController@wechatPayApp');
     Route::get('wechatNative','TestController@wechatNative');
+    Route::get('qiniu','TestController@qiniu');
 });
 
 
