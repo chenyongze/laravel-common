@@ -329,4 +329,11 @@ s8WkxG27+drhHztF
         // 发送语音验证码
 //        Yunpian::voice()->voiceSend('手机号', '验证码', '回调地址');
     }
+
+
+    public function kuaidi()
+    {
+        $info  = \Kuaidi\Kuaidi::query('yuantong', '882114232875886515');
+        return $info;
+    }
 }

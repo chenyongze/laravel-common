@@ -14308,6 +14308,97 @@ namespace {
     }
 
 
+    class Yunpian extends \Skyling\Yunpian\Facade\Yunpian{
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function sms(){
+            return \Skyling\Yunpian\Yunpian::sms();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function voice(){
+            return \Skyling\Yunpian\Yunpian::voice();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setAppKey($appKey){
+            return \Skyling\Yunpian\Yunpian::setAppKey($appKey);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setSecretKey($secretKey){
+            return \Skyling\Yunpian\Yunpian::setSecretKey($secretKey);
+        }
+        
+        /**
+         * 发送请求
+         *
+         * @param string $address 请求地址
+         * @param array $params 请求参数
+         * @param string $method 请求方法 get post
+         * @return $this 
+         * @throws \Exception
+         * @static 
+         */
+        public static function send($address, $params = array(), $method = 'post'){
+            return \Skyling\Yunpian\Yunpian::send($address, $params, $method);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function setParams($params){
+            return \Skyling\Yunpian\Yunpian::setParams($params);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function isSuccess(){
+            return \Skyling\Yunpian\Yunpian::isSuccess();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getErrorInfo(){
+            return \Skyling\Yunpian\Yunpian::getErrorInfo();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function getResponse(){
+            return \Skyling\Yunpian\Yunpian::getResponse();
+        }
+        
+    }
+
+
 }
 
 

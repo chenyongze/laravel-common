@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "42319e9e9b3c01c42bbf47fba0fb5fc5",
+    "content-hash": "0702328256a353070544da09f4c59e6c",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1565,6 +1565,39 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "jayin/kuaidi",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jayin/kuaidi.git",
+                "reference": "c57e7e152d154ac74ff23cedf2a48d39faee2a7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/Jayin/kuaidi/c57e7e152d154ac74ff23cedf2a48d39faee2a7b.zip",
+                "reference": "c57e7e152d154ac74ff23cedf2a48d39faee2a7b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kuaidi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jayin Ton",
+                    "email": "tonjayin@gmail.com"
+                }
+            ],
+            "description": "express query",
+            "time": "2016-08-27T17:46:49+00:00"
         },
         {
             "name": "jellybool/translug",
