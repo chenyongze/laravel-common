@@ -47,6 +47,7 @@
         "qiniu/php-sdk": "v7.0.8",
         "skyling/laravel-alidayu": "dev-master",
         "skyling/laravel-yunpian": "dev-master",
+        "symfony/console": "v3.2.2",
         "umeng/umeng": "dev-master",
         "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",

@@ -223,6 +223,9 @@ return [
          */
         \Umeng\UMengServiceProvider::class,
 
+
+//        RabbitMQ\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
+
     ],
 
     /*
