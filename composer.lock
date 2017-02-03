@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c94aba181b3ba8b187940126dbaf94b1",
+    "content-hash": "03b5f8cad65727c74896245f9eb06c2c",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -5536,6 +5536,52 @@
             "time": "2016-09-20T12:50:39+00:00"
         },
         {
+            "name": "umeng/umeng",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shaobaojie/umeng.git",
+                "reference": "48d515216b547400d29d7a049d5bb7bc5d5f1e2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/shaobaojie/umeng/48d515216b547400d29d7a049d5bb7bc5d5f1e2a.zip",
+                "reference": "48d515216b547400d29d7a049d5bb7bc5d5f1e2a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Umeng\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "baojie.shao",
+                    "email": "26416@163.com"
+                }
+            ],
+            "description": "umeng laravel sdk",
+            "keywords": [
+                "apns",
+                "gcm",
+                "laravel",
+                "laravel5",
+                "notification",
+                "push",
+                "umeng"
+            ],
+            "time": "2016-06-07 06:17:06"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -7278,7 +7324,8 @@
         "lokielse/omnipay-unionpay": 20,
         "overtrue/laravel-uploader": 20,
         "skyling/laravel-alidayu": 20,
-        "skyling/laravel-yunpian": 20
+        "skyling/laravel-yunpian": 20,
+        "umeng/umeng": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

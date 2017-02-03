@@ -15,6 +15,8 @@ use Omnipay\Omnipay;
 use Overtrue\Pinyin\Pinyin;
 use Skyling\Yunpian\Facade\Yunpian;
 use Symfony\Component\Console\Helper\ProcessHelper;
+use Umeng\Facades\Android;
+use Umeng\Facades\IOS;
 
 class TestController extends Controller
 {
@@ -335,5 +337,23 @@ s8WkxG27+drhHztF
     {
         $info  = \Kuaidi\Kuaidi::query('yuantong', '882114232875886515');
         return $info;
+    }
+
+    public function umeng()
+    {
+        $apns = [
+            'alert' => ['title'=>'biaoti','body'=>'fujingdexuanjianghu'],
+            'badge' => 1,
+            'sound' => 'bingbong.aiff'
+        ];
+        return IOS::customizedcast('S100000567',$apns);
+
+        $body = [
+            'ticker'=>'收到请告诉我',
+            'title'=>'通知标题',
+            'text'=>'通知文字描述',
+            'after_open'=>'go_app'
+        ];
+        return Android::customizedcast('S100000597', $body);
     }
 }

@@ -70,6 +70,7 @@ Route::group([
     Route::get('qiniu','TestController@qiniu');
     Route::get('yunpian','TestController@yunpian');
     Route::get('kuaidi','TestController@kuaidi');
+    Route::get('umeng','TestController@umeng');
 });
 
 

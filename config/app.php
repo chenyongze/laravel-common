@@ -218,7 +218,12 @@ return [
          */
         \Skyling\Yunpian\YunpianServiceProvider::class,
 
-    ],  
+        /**
+         * 友盟
+         */
+        \Umeng\UMengServiceProvider::class,
+
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -283,6 +288,9 @@ return [
         'Flash'     => Laracasts\Flash\Flash::class,
 
         'Yunpian' => \Skyling\Yunpian\Facade\Yunpian::class,
+
+        'Android'           => \Umeng\Facades\Android::class,
+        'IOS'               => \Umeng\Facades\IOS::class,
     ],
 
 ];
