@@ -64,6 +64,8 @@ Route::group([
     Route::get('db','TestController@db');
     Route::get('crypt','TestController@crypt');
     Route::get('alipayApp','TestController@alipayApp');
+    Route::get('alipayWap','TestController@alipayWap');
+    Route::get('wechatPayApp','TestController@wechatPayApp');
 });
 
 
