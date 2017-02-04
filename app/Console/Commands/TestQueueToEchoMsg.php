@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Faker\Provider\DateTime;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Log;
 
@@ -41,6 +42,6 @@ class TestQueueToEchoMsg extends Command
     public function handle()
     {
         //
-        Log::info('at '.time().' log by queue and the msg is:'.$this->msg);
+        Log::info('at '. date('Y-m-d H:i:s').' log by queue and the msg is:'.$this->msg);
     }
 }

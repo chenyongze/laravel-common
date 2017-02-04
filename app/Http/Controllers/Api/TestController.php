@@ -367,16 +367,16 @@ s8WkxG27+drhHztF
      */
     public function triggerQueue( $msg )
     {
-        Log::info('ready to trigger2');
+        Log::info('ready to trigger2::'.date('Y-m-d H:i:s'));
 //        $this->dispatch(new TestQueueToEchoMsg($msg)); //commond bus的方式运行，测试成功
 
-         $date = Carbon::now()->addSeconds(15);
+         $date = Carbon::now()->addSeconds(10);
         // // $date = Carbon::now()->addMinutes(15);
          Queue::later($date, new TestQueueToEchoMsg($msg)); //延迟执行任务，测试成功
 
         // Queue::push( new TestQueueToEchoMsg($msg));  //立即执行任务，测试成功
 
-        Log::info('triggered');
+        Log::info('triggered:::'.date('Y-m-d H:i:s'));
         echo "trgiered2";
     }
 }
