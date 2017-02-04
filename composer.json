@@ -49,6 +49,7 @@
         "skyling/laravel-yunpian": "dev-master",
         "symfony/console": "v3.2.2",
         "umeng/umeng": "dev-master",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "5.4",
         "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
