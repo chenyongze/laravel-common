@@ -71,6 +71,7 @@ Route::group([
     Route::get('yunpian','TestController@yunpian');
     Route::get('kuaidi','TestController@kuaidi');
     Route::get('umeng','TestController@umeng');
+    Route::get('toQueue/{msg}','TestController@triggerQueue');
 });
 
 

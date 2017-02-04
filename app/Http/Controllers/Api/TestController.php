@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\api;
 
+use App\Console\Commands\TestQueueToEchoMsg;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,6 +12,8 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redis;
 use Omnipay\Omnipay;
 use Overtrue\Pinyin\Pinyin;
@@ -355,5 +359,24 @@ s8WkxG27+drhHztF
             'after_open'=>'go_app'
         ];
         return Android::customizedcast('S100000597', $body);
+    }
+
+    /**
+     * @param $msg
+     * queue
+     */
+    public function triggerQueue( $msg )
+    {
+        Log::info('ready to trigger2');
+//        $this->dispatch(new TestQueueToEchoMsg($msg)); //commond bus的方式运行，测试成功
+
+         $date = Carbon::now()->addSeconds(15);
+        // // $date = Carbon::now()->addMinutes(15);
+         Queue::later($date, new TestQueueToEchoMsg($msg)); //延迟执行任务，测试成功
+
+        // Queue::push( new TestQueueToEchoMsg($msg));  //立即执行任务，测试成功
+
+        Log::info('triggered');
+        echo "trgiered2";
     }
 }
