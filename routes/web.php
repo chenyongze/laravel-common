@@ -79,4 +79,4 @@ Route::get('/home', 'HomeController@index');
 #add
 Route::get('/wechat/service', 'WechatController@service');
 Route::get('/wechat/demo', 'WechatController@demo');
-Route::get('/wechat/serviceTwo', 'WechatController@serviceTwo');
+Route::any('/wechat/serviceTwo', 'WechatController@serviceTwo');
