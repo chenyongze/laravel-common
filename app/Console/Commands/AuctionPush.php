@@ -48,12 +48,12 @@ class AuctionPush extends Command
 //        $rst = $this->redis->get('xxxx');
 //        var_dump($rst);die;
         $users = DB::table('my_user')->where('status','6')->get();
-        $auction_redis_key = 'AUCTION:USERSLiST:'.$auction_id;
+        $auction_redis_key = 'AUCTION:USERSLIST:'.$auction_id;
         foreach ($users as $user){
             $rst = Redis::lpush($auction_redis_key,$user->id);
             $msg = "结果:$rst:::$auction_redis_key:::{$user->id}";
 //            dispatch( new QueueToJpush($user));
-            \Queue::push( new QueueToJpush($user));
+            \Queue::push( new QueueToJpush($user),'','auction');
             $this->info($msg);
         }
 
