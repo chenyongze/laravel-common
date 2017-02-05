@@ -55,6 +55,7 @@
         "vladimir-yuldashev/laravel-queue-rabbitmq": "5.4",
         "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",
+        "davibennun/laravel-push-notification": "dev-laravel5",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
     },
     "require-dev": {

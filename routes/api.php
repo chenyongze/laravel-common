@@ -73,6 +73,7 @@ Route::group([
     Route::get('umeng','TestController@umeng');
     Route::get('toQueue/{msg}','TestController@triggerQueue');
     Route::get('geoip','TestController@geoIp');
+    Route::get('jpush','TestController@jpush');
 });
 
 

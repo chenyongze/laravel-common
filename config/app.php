@@ -225,6 +225,11 @@ return [
 
         Torann\GeoIP\GeoIPServiceProvider::class,
 
+        /**
+         * ios  apns    android gcm 推送
+         */
+        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class ,
+
 
 //        RabbitMQ\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
 
@@ -301,6 +306,8 @@ return [
          * 地理位置
          */
         'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
+
+        'PushNotification' => Davibennun\LaravelPushNotification\Facades\PushNotification::class,
     ],
 
 ];
