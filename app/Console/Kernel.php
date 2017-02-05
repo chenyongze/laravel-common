@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
         Commands\CreateAdmin::class,
         Commands\SendEmails::class,
         Commands\AuctionPush::class,
+        Commands\CheckServices::class,
     ];
 
     /**
