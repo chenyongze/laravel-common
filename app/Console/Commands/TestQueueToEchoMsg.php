@@ -43,5 +43,6 @@ class TestQueueToEchoMsg extends Command
     {
         //
         Log::info('at '. date('Y-m-d H:i:s').' log by queue and the msg is:'.$this->msg);
+        return ;
     }
 }

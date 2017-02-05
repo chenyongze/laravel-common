@@ -8,21 +8,21 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Support\Facades\Mail;
-
-class SendReminderEmail implements ShouldQueue
+class QueueToJpush implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $useInfo;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($useInfo)
     {
         //
+        $this->useInfo = $useInfo;
     }
 
     /**
@@ -30,12 +30,11 @@ class SendReminderEmail implements ShouldQueue
      *
      * @return void
      */
-    public function handle( Mailer $mailer)
+    public function handle()
     {
         //
-        $user = $this->user;
-        $mailer->send('emails.reminder',['user'=>$user],function($message) use ($user){
-            $message->to($user->email)->subject('新功能发布');
-        });
+//        Log::info('at '. date('Y-m-d H:i:s').' log by queue and the msg is:'.$this->msg);
+         \Log::info('at '. date('Y-m-d H:i:s').' log by queue and the msg is:'.var_export($this->useInfo,true));
+        return true;
     }
 }

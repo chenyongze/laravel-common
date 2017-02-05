@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         Commands\BlogInstall::class,
         Commands\CreateAdmin::class,
         Commands\SendEmails::class,
+        Commands\AuctionPush::class,
     ];
 
     /**
