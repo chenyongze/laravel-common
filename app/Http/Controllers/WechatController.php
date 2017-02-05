@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Log;
 
+use EasyWeChat\Foundation\Application;
+
 class WechatController extends Controller
 {
     //
@@ -37,5 +39,33 @@ class WechatController extends Controller
 
         var_dump($wechatServer);
         var_dump($wechatUser);
+    }
+
+
+    public function serviceTwo()
+    {
+        $options = [
+            'debug'     => true,
+            'app_id'    => 'wxeb6cc8cf6022fe20',
+            'secret'    => 'ee78c0c2a28e3e8d1fe6c8fcfcba38b1',
+            'token'     => 'fashion',
+            'log' => [
+                'level' => 'debug',
+                'file'  => storage_path('logs/').'easywechat.log',
+            ],
+            // ...
+        ];
+
+        $app = new Application($options);
+
+        $server = $app->server;
+        $user = $app->user;
+
+        $server->setMessageHandler(function($message) use ($user) {
+            $fromUser = $user->get($message->FromUserName);
+            return "{$fromUser->nickname} 您好！欢迎关注 yongze!";
+        });
+
+        $server->serve()->send();
     }
 }
