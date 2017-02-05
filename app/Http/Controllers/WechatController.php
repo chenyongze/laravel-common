@@ -59,11 +59,12 @@ class WechatController extends Controller
         $app = new Application($options);
 
         $server = $app->server;
-        $user = $app->user;
+//        $user = $app->user;
 
-        $server->setMessageHandler(function($message) use ($user) {
-            $fromUser = $user->get($message->FromUserName);
-            return "{$fromUser->nickname} 您好！欢迎关注 yongze!";
+        $server->setMessageHandler(function($message)  {
+//            $fromUser = $user->get($message->FromUserName);
+//            return "{$fromUser->nickname} 您好！欢迎关注 yongze!";
+            return " 您好！欢迎关注 yongze!";
         });
 
         $server->serve()->send();
