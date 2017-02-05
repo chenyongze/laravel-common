@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.4.8 on 2017-02-04.
+ * Generated for Laravel 5.4.8 on 2017-02-05.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -7257,20 +7257,20 @@ namespace {
          * @static 
          */
         public static function size($queue = null){
-            return \Illuminate\Queue\BeanstalkdQueue::size($queue);
+            return \Illuminate\Queue\RedisQueue::size($queue);
         }
         
         /**
          * Push a new job onto the queue.
          *
-         * @param string $job
+         * @param object|string $job
          * @param mixed $data
          * @param string $queue
          * @return mixed 
          * @static 
          */
         public static function push($job, $data = '', $queue = null){
-            return \Illuminate\Queue\BeanstalkdQueue::push($job, $data, $queue);
+            return \Illuminate\Queue\RedisQueue::push($job, $data, $queue);
         }
         
         /**
@@ -7283,21 +7283,21 @@ namespace {
          * @static 
          */
         public static function pushRaw($payload, $queue = null, $options = array()){
-            return \Illuminate\Queue\BeanstalkdQueue::pushRaw($payload, $queue, $options);
+            return \Illuminate\Queue\RedisQueue::pushRaw($payload, $queue, $options);
         }
         
         /**
          * Push a new job onto the queue after a delay.
          *
          * @param \DateTime|int $delay
-         * @param string $job
+         * @param object|string $job
          * @param mixed $data
          * @param string $queue
          * @return mixed 
          * @static 
          */
         public static function later($delay, $job, $data = '', $queue = null){
-            return \Illuminate\Queue\BeanstalkdQueue::later($delay, $job, $data, $queue);
+            return \Illuminate\Queue\RedisQueue::later($delay, $job, $data, $queue);
         }
         
         /**
@@ -7308,40 +7308,54 @@ namespace {
          * @static 
          */
         public static function pop($queue = null){
-            return \Illuminate\Queue\BeanstalkdQueue::pop($queue);
+            return \Illuminate\Queue\RedisQueue::pop($queue);
         }
         
         /**
-         * Delete a message from the Beanstalk queue.
+         * Migrate the delayed jobs that are ready to the regular queue.
+         *
+         * @param string $from
+         * @param string $to
+         * @return array 
+         * @static 
+         */
+        public static function migrateExpiredJobs($from, $to){
+            return \Illuminate\Queue\RedisQueue::migrateExpiredJobs($from, $to);
+        }
+        
+        /**
+         * Delete a reserved job from the queue.
          *
          * @param string $queue
-         * @param string $id
+         * @param \Illuminate\Queues\Jobs\RedisJob $job
          * @return void 
          * @static 
          */
-        public static function deleteMessage($queue, $id){
-            \Illuminate\Queue\BeanstalkdQueue::deleteMessage($queue, $id);
+        public static function deleteReserved($queue, $job){
+            \Illuminate\Queue\RedisQueue::deleteReserved($queue, $job);
         }
         
         /**
-         * Get the queue or return the default.
+         * Delete a reserved job from the reserved queue and release it.
          *
-         * @param string|null $queue
-         * @return string 
+         * @param string $queue
+         * @param \Illuminate\Queues\Jobs\RedisJob $job
+         * @param int $delay
+         * @return void 
          * @static 
          */
-        public static function getQueue($queue){
-            return \Illuminate\Queue\BeanstalkdQueue::getQueue($queue);
+        public static function deleteAndRelease($queue, $job, $delay){
+            \Illuminate\Queue\RedisQueue::deleteAndRelease($queue, $job, $delay);
         }
         
         /**
-         * Get the underlying Pheanstalk instance.
+         * Get the underlying Redis instance.
          *
-         * @return \Pheanstalk\Pheanstalk 
+         * @return \Illuminate\Contracts\Redis\Factory 
          * @static 
          */
-        public static function getPheanstalk(){
-            return \Illuminate\Queue\BeanstalkdQueue::getPheanstalk();
+        public static function getRedis(){
+            return \Illuminate\Queue\RedisQueue::getRedis();
         }
         
         /**
@@ -7355,7 +7369,7 @@ namespace {
          */
         public static function pushOn($queue, $job, $data = ''){
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\BeanstalkdQueue::pushOn($queue, $job, $data);
+            return \Illuminate\Queue\RedisQueue::pushOn($queue, $job, $data);
         }
         
         /**
@@ -7370,7 +7384,7 @@ namespace {
          */
         public static function laterOn($queue, $delay, $job, $data = ''){
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\BeanstalkdQueue::laterOn($queue, $delay, $job, $data);
+            return \Illuminate\Queue\RedisQueue::laterOn($queue, $delay, $job, $data);
         }
         
         /**
@@ -7384,7 +7398,7 @@ namespace {
          */
         public static function bulk($jobs, $data = '', $queue = null){
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\BeanstalkdQueue::bulk($jobs, $data, $queue);
+            return \Illuminate\Queue\RedisQueue::bulk($jobs, $data, $queue);
         }
         
         /**
@@ -7395,7 +7409,7 @@ namespace {
          */
         public static function getConnectionName(){
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\BeanstalkdQueue::getConnectionName();
+            return \Illuminate\Queue\RedisQueue::getConnectionName();
         }
         
         /**
@@ -7407,7 +7421,7 @@ namespace {
          */
         public static function setConnectionName($name){
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\BeanstalkdQueue::setConnectionName($name);
+            return \Illuminate\Queue\RedisQueue::setConnectionName($name);
         }
         
         /**
@@ -7419,7 +7433,7 @@ namespace {
          */
         public static function setContainer($container){
             //Method inherited from \Illuminate\Queue\Queue            
-            \Illuminate\Queue\BeanstalkdQueue::setContainer($container);
+            \Illuminate\Queue\RedisQueue::setContainer($container);
         }
         
     }

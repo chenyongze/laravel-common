@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-02-04.
+    * Generated on 2017-02-05.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -146,7 +146,7 @@ namespace PHPSTORM_META {
             'Illuminate\Mail\Markdown' instanceof \Illuminate\Mail\Markdown,
             'Illuminate\Contracts\Pipeline\Hub' instanceof \Illuminate\Pipeline\Hub,
             'queue' instanceof \Illuminate\Queue\QueueManager,
-            'queue.connection' instanceof \Illuminate\Queue\BeanstalkdQueue,
+            'queue.connection' instanceof \Illuminate\Queue\RedisQueue,
             'queue.worker' instanceof \Illuminate\Queue\Worker,
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
@@ -301,7 +301,7 @@ namespace PHPSTORM_META {
             'Illuminate\Mail\Markdown' instanceof \Illuminate\Mail\Markdown,
             'Illuminate\Contracts\Pipeline\Hub' instanceof \Illuminate\Pipeline\Hub,
             'queue' instanceof \Illuminate\Queue\QueueManager,
-            'queue.connection' instanceof \Illuminate\Queue\BeanstalkdQueue,
+            'queue.connection' instanceof \Illuminate\Queue\RedisQueue,
             'queue.worker' instanceof \Illuminate\Queue\Worker,
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
@@ -456,7 +456,7 @@ namespace PHPSTORM_META {
             'Illuminate\Mail\Markdown' instanceof \Illuminate\Mail\Markdown,
             'Illuminate\Contracts\Pipeline\Hub' instanceof \Illuminate\Pipeline\Hub,
             'queue' instanceof \Illuminate\Queue\QueueManager,
-            'queue.connection' instanceof \Illuminate\Queue\BeanstalkdQueue,
+            'queue.connection' instanceof \Illuminate\Queue\RedisQueue,
             'queue.worker' instanceof \Illuminate\Queue\Worker,
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
@@ -611,7 +611,7 @@ namespace PHPSTORM_META {
             'Illuminate\Mail\Markdown' instanceof \Illuminate\Mail\Markdown,
             'Illuminate\Contracts\Pipeline\Hub' instanceof \Illuminate\Pipeline\Hub,
             'queue' instanceof \Illuminate\Queue\QueueManager,
-            'queue.connection' instanceof \Illuminate\Queue\BeanstalkdQueue,
+            'queue.connection' instanceof \Illuminate\Queue\RedisQueue,
             'queue.worker' instanceof \Illuminate\Queue\Worker,
             'queue.listener' instanceof \Illuminate\Queue\Listener,
             'queue.failer' instanceof \Illuminate\Queue\Failed\DatabaseFailedJobProvider,
