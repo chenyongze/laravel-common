@@ -221,7 +221,7 @@ return [
         /**
          * 友盟
          */
-        Umeng\UMengServiceProvider::class,
+//        Umeng\UMengServiceProvider::class,
 
         Torann\GeoIP\GeoIPServiceProvider::class,
 
