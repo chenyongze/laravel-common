@@ -76,7 +76,7 @@ class SendEmails extends Command
                 $this->info($msg);
 
                 $bar->advance();
-                sleep(60);
+                sleep(20);
             }
 
             if($level == 1){
