@@ -212,16 +212,18 @@ return [
         /**
          * Qiniu 云储存 Laravel 5 Storage版
          */
-        \zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
+        zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class,
         /**
          * 云片
          */
-        \Skyling\Yunpian\YunpianServiceProvider::class,
+        Skyling\Yunpian\YunpianServiceProvider::class,
 
         /**
          * 友盟
          */
-        \Umeng\UMengServiceProvider::class,
+        Umeng\UMengServiceProvider::class,
+
+        Torann\GeoIP\GeoIPServiceProvider::class,
 
 
 //        RabbitMQ\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
@@ -294,6 +296,11 @@ return [
 
         'Android'           => \Umeng\Facades\Android::class,
         'IOS'               => \Umeng\Facades\IOS::class,
+
+        /**
+         * 地理位置
+         */
+        'GeoIP' => Torann\GeoIP\GeoIPFacade::class,
     ],
 
 ];

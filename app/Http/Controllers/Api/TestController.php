@@ -19,6 +19,7 @@ use Omnipay\Omnipay;
 use Overtrue\Pinyin\Pinyin;
 use Skyling\Yunpian\Facade\Yunpian;
 use Symfony\Component\Console\Helper\ProcessHelper;
+use Torann\GeoIP\Facades\GeoIP;
 use Umeng\Facades\Android;
 use Umeng\Facades\IOS;
 
@@ -378,5 +379,12 @@ s8WkxG27+drhHztF
 
         Log::info('triggered:::'.date('Y-m-d H:i:s'));
         echo "trgiered2";
+    }
+
+
+    public function geoIp()
+    {
+        $location = GeoIP::getLocation('121.69.11.168');
+        var_dump($location);
     }
 }

@@ -72,6 +72,7 @@ Route::group([
     Route::get('kuaidi','TestController@kuaidi');
     Route::get('umeng','TestController@umeng');
     Route::get('toQueue/{msg}','TestController@triggerQueue');
+    Route::get('geoip','TestController@geoIp');
 });
 
 

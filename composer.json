@@ -37,6 +37,7 @@
         "lokielse/omnipay-wechatpay": "^1.0",
         "mustangostang/spyc": "^0.6.1",
         "omnipay/paypal": "~2.0",
+        "orangehill/iseed": "dev-master",
         "overtrue/laravel-follow": "^1.0",
         "overtrue/laravel-pinyin": "^3.0",
         "overtrue/laravel-uploader": "dev-master",
@@ -49,11 +50,11 @@
         "skyling/laravel-alidayu": "dev-master",
         "skyling/laravel-yunpian": "dev-master",
         "symfony/console": "v3.2.2",
+        "torann/geoip": "^1.0",
         "umeng/umeng": "dev-master",
         "vladimir-yuldashev/laravel-queue-rabbitmq": "5.4",
         "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",
-        "orangehill/iseed": "dev-master",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
     },
     "require-dev": {
