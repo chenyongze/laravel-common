@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Mail\Mailer;
+use Illuminate\Contracts\Mail\Mailer;
 
 class SendEmails extends Command
 {
@@ -39,12 +39,13 @@ class SendEmails extends Command
      *
      * @return mixed
      */
-    public function handle( Mailer $mailer)
+    public function handle(Mailer $mailer)
     {
 //        $user = $this->user;
 //        $mailer->send('emails.reminder',['user'=>$user],function($message) use ($user){
 //            $message->to($user->email)->subject('新功能发布');
 //        });
+
 
         $name = 'yongze';
         $to = '1835962399@qq.com';
@@ -52,13 +53,20 @@ class SendEmails extends Command
             $message ->to($to)->subject('邮件测试');
         });
 
-        if($flag){
-            echo '发送邮件成功，请查收！';
-        }else{
-            echo '发送邮件失败，请重试！';
-        }
+        //发送纯文本邮件
+        $mailer->raw('你好，我是PHP程序！', function ($message) use($to) {
+            $message ->to($to)->subject('纯文本信息邮件测试');
+        });
+
+
+//        邮件中发送附件
+        $image = 'http://p1.bpimg.com/567571/19b95d3639c6f6a2.png';
+        $flag = $mailer->send('emails.attachment',['name'=>$name,'imgPath'=>$image],function($message) use($to){
+            $message ->to($to)->subject('网络图片测试');
+        });
 
         return ;
+
 
         $name = $this->ask('What is your name?');
         if ($this->confirm('Do you wish to continue? [y|N]')) {
