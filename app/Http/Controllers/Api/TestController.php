@@ -399,8 +399,8 @@ s8WkxG27+drhHztF
 
         $app_key = '90c012299469493139d203e0';
         $master_secret = '3a107d1475fcd92875698bea';
-        $client = new JPush($app_key, $master_secret);
-
+        $logFile = storage_path('/logs/').'jpush.log';
+        $client = new JPush($app_key, $master_secret,$logFile);
 
         $title = 'hello 开工大吉';
 
