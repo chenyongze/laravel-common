@@ -74,3 +74,8 @@ Route::get('{slug}', 'ArticleController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+#add
+Route::get('/wechat/service', 'WechatController@service');
+Route::get('/wechat/demo', 'WechatController@demo');
