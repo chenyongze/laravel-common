@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\QueueEmail;
 use Illuminate\Console\Command;
-use Illuminate\Contracts\Mail\Mailer;
+use Illuminate\Support\Facades\Mail as Mailer;
+use DB;
 
 class SendEmails extends Command
 {
@@ -12,7 +14,7 @@ class SendEmails extends Command
      *
      * @var string
      */
-    protected $signature = 'email:send {user}';
+    protected $signature = 'email:send';
 
     /**
      * The console command description.
@@ -22,7 +24,7 @@ class SendEmails extends Command
     protected $description = '发送邮件给用户';
 
     protected $drip='xxx';
-    protected $user=null;
+    protected $type=null;
 
     /**
      * Create a new command instance.
@@ -34,13 +36,66 @@ class SendEmails extends Command
         parent::__construct();
     }
 
+    public function handle()
+    {
+        $type = $this->ask('type[baby|.....]?');
+        switch ($type){
+            case 'baby':
+                $this->handle_baby();
+                break;
+            case 'test':
+                $this->handle_test();
+                break;
+            default:
+                break;
+        }
+
+        return ;
+    }
+
+    public function handle_baby()
+    {
+        $count = DB::table('email')->count();
+        $bar = $this->output->createProgressBar($count);
+        $level = 0;
+        $limit = 10;
+        do{
+            $emails = DB::table('email')->where('created_at','>',0)->orderBy('id','desc')->take($limit)->skip($level*$limit)->get();
+            foreach ($emails as $emailInfo){
+                $msg = "结果::::{$emailInfo->email}";
+//            \Queue::push( new QueueEmail($emailInfo->email),'','emails');
+                $name = '育儿百科';
+                $to = $emailInfo->email;
+                try{
+                    $flag = Mailer::send('emails.baby',['name'=>$name],function($message) use($to) {
+                        $message ->to($to)->subject('育儿百科');
+                    });
+                }catch (\App\Exceptions\Handler $e){
+                    $this->info($e);
+                }
+                $this->info($msg);
+
+                $bar->advance();
+                sleep(180);
+            }
+
+            if($level == 1){
+//                die;
+            }
+            ++ $level;
+        }while ($limit = count($emails));
+
+        $bar->finish();
+        return ;
+    }
     /**
      * Execute the console command.
      *
      * @return mixed
      */
-    public function handle(Mailer $mailer)
+    public function handle_test()
     {
+
 //        $user = $this->user;
 //        $mailer->send('emails.reminder',['user'=>$user],function($message) use ($user){
 //            $message->to($user->email)->subject('新功能发布');
@@ -49,8 +104,9 @@ class SendEmails extends Command
         $bar = $this->output->createProgressBar(3);
 
         $name = 'yongze';
-        $to = '1835962399@qq.com';
-        $flag = $mailer->send('emails.reminder',['name'=>$name],function($message) use($to) {
+//        $to = '1835962399@qq.com';
+        $to = 'sapphire.php@gmail.com';
+        $flag = Mailer::send('emails.reminder',['name'=>$name],function($message) use($to) {
             $message ->to($to)->subject('邮件测试');
         });
         $bar->advance();
@@ -72,14 +128,14 @@ mysql:
 {$output_mysql}
 EOF;
 
-        $mailer->raw($msg, function ($message) use($to) {
+        Mailer::raw($msg, function ($message) use($to) {
             $message ->to($to)->subject('纯文本信息邮件测试');
         });
         $bar->advance();
 
 //        邮件中发送附件
         $image = 'http://p1.bpimg.com/567571/19b95d3639c6f6a2.png';
-        $flag = $mailer->send('emails.attachment',['name'=>$name,'imgPath'=>$image],function($message) use($to){
+        $flag = Mailer::send('emails.attachment',['name'=>$name,'imgPath'=>$image],function($message) use($to){
             $message ->to($to)->subject('网络图片测试');
         });
 

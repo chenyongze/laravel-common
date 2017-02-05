@@ -61,6 +61,7 @@ return [
             'driver' => 'redis',
             'connection' => 'default',
             'queue' => 'default',
+//            'expire'=>60,
             'retry_after' => 90,
         ],
 
