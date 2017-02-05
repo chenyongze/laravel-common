@@ -46,18 +46,36 @@ class SendEmails extends Command
 //            $message->to($user->email)->subject('新功能发布');
 //        });
 
+        $bar = $this->output->createProgressBar(3);
 
         $name = 'yongze';
         $to = '1835962399@qq.com';
         $flag = $mailer->send('emails.reminder',['name'=>$name],function($message) use($to) {
             $message ->to($to)->subject('邮件测试');
         });
+        $bar->advance();
 
         //发送纯文本邮件
-        $mailer->raw('你好，我是PHP程序！', function ($message) use($to) {
+        $output_nginx =$this->execShellWithPrettyPrint('ps aux|grep nginx');
+        $output_php =$this->execShellWithPrettyPrint('ps aux|grep php');
+        $output_mysql =$this->execShellWithPrettyPrint('ps aux|grep nginx');
+        $msg = <<<EOF
+监控 服务器:
+===============
+nginx:
+{$output_nginx}
+===============
+php:
+{$output_php}
+===============
+mysql:
+{$output_mysql}
+EOF;
+
+        $mailer->raw($msg, function ($message) use($to) {
             $message ->to($to)->subject('纯文本信息邮件测试');
         });
-
+        $bar->advance();
 
 //        邮件中发送附件
         $image = 'http://p1.bpimg.com/567571/19b95d3639c6f6a2.png';
@@ -65,6 +83,7 @@ class SendEmails extends Command
             $message ->to($to)->subject('网络图片测试');
         });
 
+        $bar->finish();
         return ;
 
 
@@ -82,5 +101,22 @@ class SendEmails extends Command
         }else{
             $this->error($name);
         }
+    }
+
+    /**
+     * Exec sheel with pretty print.
+     *
+     * @param  string $command
+     * @return mixed
+     */
+    public function execShellWithPrettyPrint($command)
+    {
+        $this->info('---');
+        $this->info($command);
+        $output = shell_exec($command);
+        $this->info($output);
+        $this->info('---');
+
+        return $output;
     }
 }
