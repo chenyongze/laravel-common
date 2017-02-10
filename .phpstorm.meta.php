@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-02-05.
+    * Generated on 2017-02-10.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -69,6 +69,7 @@ namespace PHPSTORM_META {
             'infyom.rollback' instanceof \InfyOm\Generator\Commands\RollbackGeneratorCommand,
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
+            'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -162,8 +163,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
-            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
-            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \Illuminate\Contracts\Container\Container::make('') => [
             '' == '@',
@@ -225,6 +224,7 @@ namespace PHPSTORM_META {
             'infyom.rollback' instanceof \InfyOm\Generator\Commands\RollbackGeneratorCommand,
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
+            'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -318,8 +318,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
-            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
-            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \App::make('') => [
             '' == '@',
@@ -381,6 +379,7 @@ namespace PHPSTORM_META {
             'infyom.rollback' instanceof \InfyOm\Generator\Commands\RollbackGeneratorCommand,
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
+            'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -474,8 +473,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
-            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
-            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
         \app('') => [
             '' == '@',
@@ -537,6 +534,7 @@ namespace PHPSTORM_META {
             'infyom.rollback' instanceof \InfyOm\Generator\Commands\RollbackGeneratorCommand,
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
+            'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -630,8 +628,6 @@ namespace PHPSTORM_META {
             'command.ide-helper.meta' instanceof \Barryvdh\LaravelIdeHelper\Console\MetaCommand,
             'html' instanceof \Collective\Html\HtmlBuilder,
             'form' instanceof \Collective\Html\FormBuilder,
-            'umeng.ios' instanceof \Umeng\IOS\IOSPusher,
-            'umeng.android' instanceof \Umeng\Android\AndroidPusher,
         ],
     ];
 }

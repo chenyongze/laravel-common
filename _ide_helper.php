@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.4.8 on 2017-02-05.
+ * Generated for Laravel 5.4.8 on 2017-02-10.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -8147,6 +8147,7 @@ namespace {
          *  * Request::HEADER_CLIENT_HOST:  defaults to X-Forwarded-Host  (see getHost())
          *  * Request::HEADER_CLIENT_PORT:  defaults to X-Forwarded-Port  (see getPort())
          *  * Request::HEADER_CLIENT_PROTO: defaults to X-Forwarded-Proto (see getScheme() and isSecure())
+         *  * Request::HEADER_FORWARDED:    defaults to Forwarded         (see RFC 7239)
          * 
          * Setting an empty value allows to disable the trusted header for the given key.
          *
@@ -14445,56 +14446,15 @@ namespace {
     }
 
 
-    class Android extends \Umeng\Facades\Android{
+    class PushNotification extends \Davibennun\LaravelPushNotification\Facades\PushNotification{
         
         /**
          * 
          *
          * @static 
          */
-        public static function unicast($device_tokens = '', $body = array(), $extra = array()){
-            return \Umeng\Android\AndroidPusher::unicast($device_tokens, $body, $extra);
-        }
-        
-        /**
-         * 列播
-         *
-         * @param string $device_tokens
-         * @param array $body
-         * @param array $extra
-         * @return mixed 
-         * @throws \Umeng\Exception\UmengException
-         * @static 
-         */
-        public static function listcast($device_tokens = '', $body = array(), $extra = array()){
-            return \Umeng\Android\AndroidPusher::listcast($device_tokens, $body, $extra);
-        }
-        
-        /**
-         * 广播
-         *
-         * @param array $body
-         * @param array $extra
-         * @return int 
-         * @throws \Umeng\Android\Exception
-         * @static 
-         */
-        public static function broadcast($body = array(), $extra = array()){
-            return \Umeng\Android\AndroidPusher::broadcast($body, $extra);
-        }
-        
-        /**
-         * customizedcast
-         *
-         * @param string $alias
-         * @param array $body
-         * @param array $extra
-         * @return int|mixed 
-         * @throws Exception
-         * @static 
-         */
-        public static function customizedcast($alias = '', $body = array(), $extra = array()){
-            return \Umeng\Android\AndroidPusher::customizedcast($alias, $body, $extra);
+        public static function app($appName){
+            return \Davibennun\LaravelPushNotification\PushNotification::app($appName);
         }
         
         /**
@@ -14502,22 +14462,8 @@ namespace {
          *
          * @static 
          */
-        public static function sendStatus($taskID){
-            return \Umeng\Android\AndroidPusher::sendStatus($taskID);
-        }
-        
-    }
-
-
-    class IOS extends \Umeng\Facades\IOS{
-        
-        /**
-         * 
-         *
-         * @static 
-         */
-        public static function broadcast($aps = array(), $extra = array()){
-            return \Umeng\IOS\IOSPusher::broadcast($aps, $extra);
+        public static function Message(){
+            return \Davibennun\LaravelPushNotification\PushNotification::Message();
         }
         
         /**
@@ -14525,8 +14471,8 @@ namespace {
          *
          * @static 
          */
-        public static function listcast($device_tokens = '', $aps = array(), $extra = array()){
-            return \Umeng\IOS\IOSPusher::listcast($device_tokens, $aps, $extra);
+        public static function Device(){
+            return \Davibennun\LaravelPushNotification\PushNotification::Device();
         }
         
         /**
@@ -14534,8 +14480,8 @@ namespace {
          *
          * @static 
          */
-        public static function unicast($device_tokens = '', $aps = array(), $extra = array()){
-            return \Umeng\IOS\IOSPusher::unicast($device_tokens, $aps, $extra);
+        public static function DeviceCollection(){
+            return \Davibennun\LaravelPushNotification\PushNotification::DeviceCollection();
         }
         
         /**
@@ -14543,8 +14489,8 @@ namespace {
          *
          * @static 
          */
-        public static function customizedcast($alias = '', $aps = array(), $extra = array()){
-            return \Umeng\IOS\IOSPusher::customizedcast($alias, $aps, $extra);
+        public static function PushManager(){
+            return \Davibennun\LaravelPushNotification\PushNotification::PushManager();
         }
         
         /**
@@ -14552,8 +14498,26 @@ namespace {
          *
          * @static 
          */
-        public static function sendStatus($taskID){
-            return \Umeng\IOS\IOSPusher::sendStatus($taskID);
+        public static function ApnsAdapter(){
+            return \Davibennun\LaravelPushNotification\PushNotification::ApnsAdapter();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function GcmAdapter(){
+            return \Davibennun\LaravelPushNotification\PushNotification::GcmAdapter();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function Push(){
+            return \Davibennun\LaravelPushNotification\PushNotification::Push();
         }
         
     }
