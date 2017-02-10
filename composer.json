@@ -11,6 +11,7 @@
         "barryvdh/laravel-debugbar": "^2.3",
         "barryvdh/laravel-dompdf": "^0.7.1",
         "barryvdh/laravel-ide-helper": "^2.2",
+        "davibennun/laravel-push-notification": "dev-laravel5",
         "dflydev/apache-mime-types": "^1.0",
         "doctrine/dbal": "^2.5",
         "endroid/qrcode": "^1.9",
@@ -47,6 +48,7 @@
         "phpxin/phprpc": "^1.0",
         "predis/predis": "^1.1",
         "qiniu/php-sdk": "v7.0.8",
+        "shift31/laravel-elasticsearch": "^2.0",
         "skyling/laravel-alidayu": "dev-master",
         "skyling/laravel-yunpian": "dev-master",
         "symfony/console": "v3.2.2",
@@ -55,7 +57,6 @@
         "vladimir-yuldashev/laravel-queue-rabbitmq": "5.4",
         "yangyifan/upload": "^0.2.0",
         "yzalis/identicon": "^1.1",
-        "davibennun/laravel-push-notification": "dev-laravel5",
         "zgldh/qiniu-laravel-storage": "^0.6.2"
     },
     "require-dev": {

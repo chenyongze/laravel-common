@@ -4,6 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Console\Commands\TestQueueToEchoMsg;
 use App\User;
+use Barryvdh\DomPDF\PDF;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -470,5 +471,21 @@ s8WkxG27+drhHztF
         }
 //        print_r($response);
         return $response;
+    }
+
+
+    public function pdf()
+    {
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadHTML('<style>
+.page-break {
+    page-break-after: always;
+}
+</style>
+<h1>Page 1</h1>
+<div class="page-break"></div>
+<h1>Page 2</h1>');
+        return $pdf->stream();
+
     }
 }

@@ -74,6 +74,7 @@ Route::group([
     Route::get('toQueue/{msg}','TestController@triggerQueue');
     Route::get('geoip','TestController@geoIp');
     Route::get('jpush','TestController@jpush');
+    Route::get('pdf','TestController@pdf');
 });
 
 
