@@ -6,6 +6,7 @@ use App\Console\Commands\TestQueueToEchoMsg;
 use App\User;
 use Barryvdh\DomPDF\PDF;
 use Carbon\Carbon;
+use Elasticsearch\ClientBuilder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redis;
 use Omnipay\Omnipay;
 use Overtrue\Pinyin\Pinyin;
+use Shift31\LaravelElasticsearch\Facades\Es;
 use Skyling\Yunpian\Facade\Yunpian;
 use Symfony\Component\Console\Helper\ProcessHelper;
 use Torann\GeoIP\Facades\GeoIP;
@@ -487,5 +489,30 @@ s8WkxG27+drhHztF
 <h1>Page 2</h1>');
         return $pdf->stream();
 
+    }
+
+
+    public function es()
+    {
+
+ /*       $data = [
+            'body' => [
+                'testField' => 'dddd'
+            ],
+            'index' => 'my_index',
+            'type' => 'my_type',
+            'id' => 'my_id',
+        ];
+        $client = ClientBuilder::create()->build();
+        $return = $client->index($data);
+        return $return;*/
+
+//        $searchParams['index'] = '/';
+//        $searchParams['index'] = 'my_index';
+        $searchParams['size'] = 50;
+        $searchParams['body']['query']['query_string']['query'] = '';
+        $result = Es::search($searchParams);
+
+        return $result;
     }
 }

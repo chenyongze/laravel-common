@@ -230,6 +230,9 @@ return [
          */
         Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class ,
 
+//        elasticsearch
+        Shift31\LaravelElasticsearch\ElasticsearchServiceProvider::class,
+
 
 //        RabbitMQ\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
 

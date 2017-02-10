@@ -75,6 +75,7 @@ Route::group([
     Route::get('geoip','TestController@geoIp');
     Route::get('jpush','TestController@jpush');
     Route::get('pdf','TestController@pdf');
+    Route::get('es','TestController@es');
 });
 
 
