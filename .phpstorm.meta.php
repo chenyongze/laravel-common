@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-02-10.
+    * Generated on 2017-02-11.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -70,6 +70,7 @@ namespace PHPSTORM_META {
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
             'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
+            'Elasticsearch\Client' instanceof \Elasticsearch\Client,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -225,6 +226,7 @@ namespace PHPSTORM_META {
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
             'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
+            'Elasticsearch\Client' instanceof \Elasticsearch\Client,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -380,6 +382,7 @@ namespace PHPSTORM_META {
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
             'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
+            'Elasticsearch\Client' instanceof \Elasticsearch\Client,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -535,6 +538,7 @@ namespace PHPSTORM_META {
             'yunpian' instanceof \Skyling\Yunpian\Yunpian,
             'geoip' instanceof \Torann\GeoIP\GeoIP,
             'pushNotification' instanceof \Davibennun\LaravelPushNotification\PushNotification,
+            'Elasticsearch\Client' instanceof \Elasticsearch\Client,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,

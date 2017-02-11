@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "291375cc3be125600d04e8b93e9b1f09",
+    "content-hash": "a22ed18171f873150740fb980f264890",
     "packages": [
         {
             "name": "aliyuncs/oss-sdk-php",
@@ -1150,6 +1150,49 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2016-07-18T04:51:16+00:00"
+        },
+        {
+            "name": "fook/laravel-xunsearch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fooklook/laravel-xunsearch.git",
+                "reference": "22229b95a494f3560659d93342611b36da8f5934"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/fooklook/laravel-xunsearch/22229b95a494f3560659d93342611b36da8f5934.zip",
+                "reference": "22229b95a494f3560659d93342611b36da8f5934",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "php",
+            "autoload": {
+                "psr-4": {
+                    "Fook\\Xunsearch\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "fooklook",
+                    "email": "xiashuo.he@foxmail.com"
+                }
+            ],
+            "description": "xunsearch搜索引擎SDK开发laravel版本",
+            "keywords": [
+                "engine",
+                "laravel5",
+                "sdk",
+                "search",
+                "xunsearch"
+            ],
+            "time": "2015-12-16 11:37:35"
         },
         {
             "name": "guzzle/guzzle",
@@ -8585,6 +8628,7 @@
     "stability-flags": {
         "infyomlabs/laravel-generator": 20,
         "davibennun/laravel-push-notification": 20,
+        "fook/laravel-xunsearch": 20,
         "infyomlabs/adminlte-templates": 20,
         "infyomlabs/swagger-generator": 20,
         "jlapp/swaggervel": 20,

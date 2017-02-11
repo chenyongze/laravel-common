@@ -16,6 +16,7 @@
         "doctrine/dbal": "^2.5",
         "endroid/qrcode": "^1.9",
         "erusev/parsedown": "^1.6",
+        "fook/laravel-xunsearch": "dev-master",
         "guzzle/guzzle": "^3.9",
         "infyomlabs/adminlte-templates": "5.3.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
